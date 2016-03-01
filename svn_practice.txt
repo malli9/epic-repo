@@ -1,0 +1,39 @@
+how to add file
+--------------------------
+
+$touch file1
+$svn add file1
+$svn commit file1 -m "this is file1 adding"
+$svn update
+
+
+how to add folder or directory
+----------------------------------
+$svn mkdir dir1
+$svn commit dir1 -m "this is dir1 adding"
+$svn update
+
+
+how to create svn repository
+------------------------------------
+$svnadmin create project1-repo
+$cd project1-repo
+$chmod -R 777 db
+$cd conf
+$vi authz
+type [/] before * = line 
+remove the comment # before * = and give rw like 
+[/]
+* = rw
+and save this line
+$vi svnserve.conf
+remove the # before the lines 
+anon-access = read
+auth-access = write
+authz-db = authz
+and save this file
+
+how to delete file
+----------------------------------
+$svn delete file1
+$svn commit file1 -m "delete the file1"
