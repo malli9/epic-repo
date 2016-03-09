@@ -1,0 +1,35 @@
+The typical work cycle looks like this:
+
+1.Update your working copy.
+
+svn update
+
+2.Make changes.
+
+svn add
+
+svn delete
+
+svn copy
+
+svn move
+
+3.Examine your changes.
+
+svn status
+
+svn diff
+
+4.Possibly undo some changes.
+
+svn revert
+
+5.Resolve conflicts (merge others' changes).
+
+svn update
+
+svn resolve
+
+6.Commit your changes.
+
+svn commit
